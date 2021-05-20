@@ -12,7 +12,9 @@ class EndTransitionActivity : AppCompatActivity() {
         binding = ActivityEndTransitionBinding.inflate(layoutInflater).apply { setContentView(root) }
         with(binding) {
 
-
+            btnNavigation.setOnClickListener {
+                finishAfterTransition()
+            }
 
         }
     }

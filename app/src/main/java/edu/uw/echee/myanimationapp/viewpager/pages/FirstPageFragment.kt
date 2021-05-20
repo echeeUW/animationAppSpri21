@@ -1,5 +1,6 @@
 package edu.uw.echee.myanimationapp.viewpager.pages
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,10 +11,18 @@ import edu.uw.echee.myanimationapp.databinding.FragmentFirstPageBinding
 
 
 class FirstPageFragment : Fragment() {
+
+    // private lateinit var myApp: Application
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        // myApp = (context.applicationContext as MyApplication)
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding = FragmentFirstPageBinding.inflate(inflater)
         with(binding) {
-
+            //ex: myApp.customManager.getData()
         }
         return binding.root
     }
